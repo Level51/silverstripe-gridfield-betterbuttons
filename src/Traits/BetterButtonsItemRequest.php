@@ -251,7 +251,7 @@ trait BetterButtonsItemRequest
         if ($crumbs && $crumbs->count() >= 2) {
             $oneLevelUp = $crumbs->offsetGet($crumbs->count() - 2);
             $controller = $this->getToplevelController();
-            $controller->getRequest()->addHeader('X-Pjax', 'Content');
+            $controller->getResponse()->addHeader('X-Pjax', 'Content');
             $url = $oneLevelUp->Link;
 
             // TODO make a proper solution for this
