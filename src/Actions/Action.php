@@ -127,6 +127,16 @@ class Action extends LiteralField implements BetterButtonInterface
     }
 
     /**
+     * Override the "readonly" type derived from DatalessField.
+     *
+     * @return string
+     */
+    public function Type()
+    {
+        return 'betterbuttons-action';
+    }
+
+    /**
      * Gets the text for the button
      * @return string
      */
